@@ -1,5 +1,11 @@
 # Cào Cốt trên Cốt Pờ Tít (Code PTIT)
 
+Cào cốt đã AC trên <a href="https://code.ptit.edu.vn/">Code PTIT</a> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png">
+
+Ví dụ: https://github.com/KiyoGami/Python-PTIT
+
+Chương trình sẽ cào cốt tốt nhất của bạn (theo thời gian, bộ nhớ)
+
 **Note:** Mình làm cái này vì mục đích giúp ae khoá sau sẽ bớt trải nghiệm đau khổ khi gặp mấy bài oái oăm vc =)). Lưu ý là mình chỉ làm trên windows, chưa test trên các hđh khác
 
 ## Yêu cầu 
@@ -41,6 +47,8 @@ PTIT_password=<Mật khẩu>
 course=<mã của môn, lấy trong file data.txt nhé>
 storage_path=<Path đến folder lưu trữ>
 timesleep=<thời gian đợi>
+timedelay=<khuyên là 1>
+timeperten=<tuỳ>
 ```
 **timesleep:** thường khi ta gửi request quá nhiều sẽ bị web cho vào thời gian chờ
 

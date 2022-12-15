@@ -26,7 +26,7 @@ def main():
 
     #save time and avoid GET requests limit
     existing_solutions = set()
-    if custome_settings.CACHE:
+    if custom_settings.CACHE:
         for solution in os.listdir(storage_path):
             id, name = solution.rsplit('.', 1)[0].split(' - ', 1)
             existing_solutions.add(id)
@@ -101,6 +101,7 @@ def main():
         while source_page.status_code == 429:
             print(f'watting {time_sleep}s for reseting GET requests limit')
             sleep(time_sleep)
+            source_page = session.get(best_submission_link)
         source_page_soup = bs(source_page.content, 'html.parser')
         problem_title = source_page_soup.find('a', {'class': 'link--red'}).contents[0]
         source_code = source_page_soup.find('input', {'id': 'source_code'})['value']
@@ -114,6 +115,11 @@ def main():
         result = problem_title + ' ✔️'
         print(result + '\n')
         crawled_problems.append(result)
+        sleep(int(os.environ.get('timedelay', 0)))
+        if len(crawled_problems)%10 == 0: 
+            if os.environ.get('timeperten'):
+                print(f'sleep ' + os.environ.get('timeperten')+'s after crawling 10 problems')
+            sleep(int(os.environ.get('timeperten', 0)))
     
     print('Done!')
     print('\n'.join(crawled_problems))

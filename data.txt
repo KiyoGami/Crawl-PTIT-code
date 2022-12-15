@@ -1,4 +1,4 @@
 329: java
 326: python
 
-window.location = '?course=' + data
+Mã khoá học 
