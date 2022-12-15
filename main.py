@@ -6,7 +6,8 @@ from time import sleep
 from dotenv import load_dotenv
 load_dotenv()
 
-import custome_settings
+import custom_settings
+
 lang ={
     '329': 'java',
     '326': 'py',
@@ -64,7 +65,7 @@ def main():
             ac_problem_links.append(ac_problem_link)
 
     crawled_problems = []
-    for ac_link in ac_problem_links[:1]:
+    for ac_link in ac_problem_links:
         print('getting best submission for ' + ac_link + '...')
         problem_detail = session.get(ac_link)
         while problem_detail.status_code == 429:
