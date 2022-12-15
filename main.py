@@ -64,7 +64,7 @@ def main():
             ac_problem_links.append(ac_problem_link)
 
     crawled_problems = []
-    for ac_link in ac_problem_links:
+    for ac_link in ac_problem_links[:1]:
         print('getting best submission for ' + ac_link + '...')
         problem_detail = session.get(ac_link)
         while problem_detail.status_code == 429:
@@ -106,7 +106,8 @@ def main():
 
         source_storage_path = os.path.join(storage_path, problem_title + '.' + lang[os.environ.get('course')])
         with open(source_storage_path, 'w') as f:
-            f.write(source_code)
+            for line in source_code.splitlines():
+                f.write(line + '\n')
             f.close()
         
         result = problem_title + ' ✔️'
