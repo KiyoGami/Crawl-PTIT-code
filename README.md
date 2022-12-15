@@ -1,6 +1,6 @@
 # Cào Cốt trên Cốt Pờ Tít (Code PTIT)
 
-Cào cốt đã AC trên <a href="https://code.ptit.edu.vn/">Code PTIT</a> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png">
+Cào cốt đã AC trên <a href="https://code.ptit.edu.vn/">Code PTIT <img style="height: 64px;" src="https://code.ptit.edu.vn/2020/images/logo_ptit.png"></a>
 
 Ví dụ: https://github.com/KiyoGami/Python-PTIT
 
@@ -46,7 +46,7 @@ PTIT_username=<Tên tài khoản của bạn>
 PTIT_password=<Mật khẩu>
 course=<mã của môn, lấy trong file data.txt nhé>
 storage_path=<Path đến folder lưu trữ>
-timesleep=<thời gian đợi>
+timesleep=<thời gian đợi, mặc định là 60>
 timedelay=<khuyên là 1>
 timeperten=<tuỳ>
 ```
