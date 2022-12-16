@@ -9,8 +9,9 @@ load_dotenv()
 import custom_settings
 
 lang ={
-    '329': 'java',
     '326': 'py',
+    '329': 'java',
+    '337': 'cpp',
 }
 
 def main():
