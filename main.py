@@ -29,6 +29,7 @@ def main():
     existing_solutions = set()
     if custom_settings.CACHE:
         for solution in os.listdir(storage_path):
+            if solution.startswith('.'): continue
             id, name = solution.rsplit('.', 1)[0].split(' - ', 1)
             existing_solutions.add(id)
 
