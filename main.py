@@ -9,6 +9,7 @@ load_dotenv()
 import custom_settings
 
 lang ={
+    '190': 'cpp',
     '326': 'py',
     '329': 'java',
     '337': 'cpp',
@@ -109,7 +110,7 @@ def main():
         source_code = source_page_soup.find('input', {'id': 'source_code'})['value']
 
         source_storage_path = os.path.join(storage_path, problem_title + '.' + lang[os.environ.get('course')])
-        with open(source_storage_path, 'w') as f:
+        with open(source_storage_path, 'w', encoding='utf-8') as f:
             for line in source_code.splitlines():
                 f.write(line + '\n')
             f.close()
